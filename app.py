@@ -44,6 +44,11 @@ class_labels = [
     'Warts Molluscum and other Viral Infections'
 ]
 
+@app.route('/')
+def home():
+    return "Welcome to the Flask App!"
+
+
 @app.route('/predict', methods=['POST'])
 def upload_image():
     if 'predictions' not in session:
